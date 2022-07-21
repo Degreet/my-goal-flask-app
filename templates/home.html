@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+{% block head %}
+<script src="{{ url_for('static', filename='js/home.js') }}" type="module" defer></script>
+{% endblock %}
+
+{% block body %}
+<div class="text-center mt-5">
+    <h1>My Goal</h1>
+    <p>Создайте свою цель и следите за ней</p>
+    <a href="/login"><button class="btn btn-primary">Начать!</button></a>
+</div>
+{% endblock %}

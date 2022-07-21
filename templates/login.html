@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Войти
+{% endblock %}
+
+{% block head %}
+<script src="{{ url_for('static', filename='js/login-form.js') }}" defer></script>
+{% endblock %}
+
+{% block body %}
+<div class="alert alert-danger" id="alert" hidden></div>
+
+<div class="mt-5 w-100">
+    <h1 class="text-center">Войдите в свой аккаунт</h1>
+    <form id="loginForm" class="mt-5">
+        <div class="mb-3">
+            <label for="login" class="form-label">Введите логин</label>
+            <input type="text" class="form-control" placeholder="Ваш логин" id="login">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Придумайте пароль</label>
+            <input placeholder="Не менее 8 симв." type="password" class="form-control" id="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Войти</button>
+    </form>
+</div>
+{% endblock %}
