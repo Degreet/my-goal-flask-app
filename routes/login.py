@@ -1,4 +1,3 @@
-import json
 from flask import Blueprint, make_response, request, render_template, jsonify
 from config import JWT_SECRET
 from app import User, db

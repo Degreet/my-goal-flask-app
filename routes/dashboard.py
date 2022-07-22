@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, make_response, render_template, request
-from app import User, db
 from config import JWT_SECRET
+from app import User, db
 import jwt
 import ast
 
