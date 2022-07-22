@@ -5,7 +5,9 @@ from datetime import datetime
 app = Flask(__name__) # создаем приложение
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///project.db'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
 db = SQLAlchemy(app)
+db.create_all()
 
 
 class User(db.Model):
@@ -24,4 +26,4 @@ class User(db.Model):
 if __name__ == "__main__":
     from routes import setup_routes
     setup_routes(app) # регистрируем роуты
-    app.run(debug=True) # запускаем сервер по порту 5000
+    app.run(debug=False) # запускаем сервер production
