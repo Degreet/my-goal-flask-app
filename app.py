@@ -26,4 +26,4 @@ class User(db.Model):
 if __name__ == "__main__":
     from routes import setup_routes
     setup_routes(app) # регистрируем роуты
-    app.run(debug=False, port=8080) # запускаем сервер production
+    app.run(debug=False, port=3000) # запускаем сервер production
