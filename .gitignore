@@ -1,5 +1,4 @@
+.vscode
 __pycache__
 routes/__pycache__
-.vscode
 project.db
-config.py
